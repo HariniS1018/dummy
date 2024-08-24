@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <style>
+            body {
+                font-family: Cambria;
+                font-size: 20px;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .content {
+                border-radius: 5%;
+                border: 2px solid crimson;
+                padding: 15px;
+                width: 250px;
+            }
+            .login {
+                text-align: center;
+                color: crimson;
+            }
+            .input-container {
+                position: relative;
+                margin-bottom: 10px;
+            }
+            .form-control {
+                display: block;
+                width: 100%;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #6c757d !important;
+            }
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h2 class="login">login</h2>
+            <hr>
+            <table>
+                <tr>
+                    <label id="username_label"></label>
+                </tr>
+                <tr>
+                    <div class="input-container">
+                        <input required type="text" id="username_input" placeholder="username" style="border-radius: 5px; border-color: gray; width: 150px;" onclick="user()">
+                    </div>
+                </tr>
+                <tr>
+                    <label id="password_label"></label>
+                </tr>
+                <tr>
+                    <div class="input-container">
+                        <input required type="password" id="password_input" placeholder="password" style="border-radius: 5px; border-color: gray; width: 150px;" onclick="pwd()">
+                    </div>
+                </tr>
+                <tr>
+                    <a href="" class="form-control"> Forgot password? </a>
+                </tr>
+                <tr><input type="submit" style = "color: white; font-size: large; border-radius: 5px; margin-top: 10px; width: 100%; padding: 5px; background-color: rgb(235, 41, 80);"id="submit" value="login"></tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function user(){
+            document.getElementById('username_label').innerHTML = 'username';
+            document.getElementById('username_input').placeholder = '';
+        }
+        function pwd(){
+            document.getElementById('password_label').innerHTML = 'password';
+            document.getElementById('password_input').placeholder = '';
+        }
+    </script>
+</body>
+</html>
